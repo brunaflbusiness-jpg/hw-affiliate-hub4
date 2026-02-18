@@ -361,11 +361,15 @@
         spinner.style.display = 'block';
         try {
             if (CONFIG.GOOGLE_SCRIPT_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+                var formData = new URLSearchParams();
+                formData.append('fullName', fullName);
+                formData.append('telegram', telegram);
+                formData.append('cbNickname', cbNickname);
+                formData.append('timestamp', new Date().toISOString());
                 await fetch(CONFIG.GOOGLE_SCRIPT_URL, {
                     method: 'POST',
                     mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ fullName, telegram, cbNickname, timestamp: new Date().toISOString() })
+                    body: formData
                 });
             }
             registeredAffiliateId = cbNickname;
