@@ -325,7 +325,7 @@
 
 <script>
     const CONFIG = {
-        GOOGLE_SCRIPT_URL: 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE',
+        GOOGLE_SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbzjUXdVkBPirIgKg3hqoCG7QpjZc8eyuRWb60CEv-9aoUA_kuZ4lUXctBYw0YPLDwfU4w/exec',
     };
 
     const PRODUCTS = {
@@ -360,7 +360,7 @@
         btnText.textContent = 'Submitting...';
         spinner.style.display = 'block';
         try {
-            if (CONFIG.GOOGLE_SCRIPT_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+            if (CONFIG.GOOGLE_SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbzjUXdVkBPirIgKg3hqoCG7QpjZc8eyuRWb60CEv-9aoUA_kuZ4lUXctBYw0YPLDwfU4w/exec') {
                 await fetch(CONFIG.GOOGLE_SCRIPT_URL, {
                     method: 'POST',
                     mode: 'no-cors',
