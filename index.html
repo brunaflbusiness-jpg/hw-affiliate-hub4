@@ -272,9 +272,21 @@
             <div class="form-group">
                 <label class="form-label">Select Product</label>
                 <div class="product-grid" id="productGrid">
+                    <div class="product-card" data-vendor="sugarharm" onclick="selectProduct(this)">
+                        <div class="product-name">SugarHarmony</div>
+                        <div class="product-id">sugarharm</div>
+                    </div>
                     <div class="product-card" data-vendor="burnslim" onclick="selectProduct(this)">
                         <div class="product-name">BurnSlim</div>
                         <div class="product-id">burnslim</div>
+                    </div>
+                    <div class="product-card" data-vendor="leandrops1" onclick="selectProduct(this)">
+                        <div class="product-name">LeanDrops</div>
+                        <div class="product-id">leandrops1</div>
+                    </div>
+                    <div class="product-card" data-vendor="memogen" onclick="selectProduct(this)">
+                        <div class="product-name">MemoGenesis</div>
+                        <div class="product-id">memogen</div>
                     </div>
                 </div>
             </div>
@@ -319,8 +331,8 @@
     const PRODUCTS = {
         sugarharm: { name: 'SugarHarmony', vendor: 'sugarharm' },
         burnslim: { name: 'BurnSlim', vendor: 'burnslim' },
-        memogen: { name: 'Memogenesis', vendor: 'memogen' },
         leandrops1: { name: 'LeanDrops', vendor: 'leandrops1' },
+        memogen: { name: 'MemoGenesis', vendor: 'memogen' },
     };
 
     let selectedVendor = null;
